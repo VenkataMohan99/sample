@@ -6,7 +6,7 @@ function App() {
     let reqMethods={
       methods:"GET"
     }
-    let rawData=await fetch("http://localhost:9985/countryList",reqMethods);
+    let rawData=await fetch("/countryList",reqMethods);
     let convertedData=await rawData.json();
     setCountryList(convertedData);
     console.log(convertedData);
